@@ -1,14 +1,14 @@
-'Our Bondage and Our Freedom' - Frederick Douglass in Edinburgh and Scotland - map viewers
-==========================================================================================
+The Stevenson Maps and Plans of Scotland, 1660 - 1940 - map viewer
+===================================================================
 
-These <a href="https://geo.nls.uk/maps/douglass/index.html">map viewers</a> form part of the <a href="https://www.ed.ac.uk/literatures-languages-cultures/research/current-projects/our-bondage-and-our-freedom" >Our Bondage and Our Freedom project</a>, celebrating the 200 year anniversary of the birth of African American activist and author, Frederick Douglass, in 2018. 
+The <a href="https://maps.nls.uk/projects/stevenson/index.html">map viewer</a> uses <a href="http://openlayers.org">OpenLayers 4.6.25/a> for the map interface, <a href="http://jqueryui.com/">JQuery</a> to provide filtering and a date range selector, and a <a href="https://www.maptiler.com/desktop/">MapTiler</a> georeferenced mosaic of historical maps of Great Britain from ca. 1900. 
 
-The <a href="https://geo.nls.uk/maps/douglass/index.html">map viewers</a> use <a href="http://openlayers.org">OpenLayers 4.4.2</a> for the map interface, <a href="http://jqueryui.com/">JQuery</a> to provide a scrollable left panel linking from the points on the map, and <a href="https://www.maptiler.com/desktop/">MapTiler</a> georeferenced mosaics of historical maps of Scotland and Edinburgh. 
+<p>There were three main aims in creating the map interface:</p>
 
-The viewer includes a <a href="https://geo.nls.uk/maps/douglass/">map of the places in Edinburgh</a> where Frederick Douglass lived, held meetings and gave speeches during his antislavery campaign. There are also map viewers showing <a href="https://geo.nls.uk/maps/douglass/abolitionists.html">Black Abolitionists in Edinburgh</a>, and the places associated with <a href="https://geo.nls.uk/maps/douglass/scotland.html">Frederick Douglass in Scotland</a>.
+<ol>
+<li> To allow the Stevenson maps covering a particular place to be quickly discovered by clicking on the place. </li>
+<li> To allow easy filtering of the maps by subject and date. </li>
+<li> To allow the different geographic extents of the maps to be clearly visible. </li> 
+</ol>
 
-Each of the three map viewers - index.html, abolitionists.html, and scotland.html has a specific Javascript file of the same name in the scripts folder, which forms the main bespoke functionality and content for each viewer. This file is commented to explain the specific content and functions within it.
-
-The locations associated with Douglass and the Black Abolitionists are shown using <a href="http://geojson.org/geojson-spec.html">GeoJSON</a> sets of points. The unique numbers of these points are used to link between the leftpanel texts and the points on the map, and from the points on the map to the leftpanel text.
-
-The content for this map has principally been gathered by Dr Celeste Marie-Bernier, with assistance from Nick Batho and Andrew Taylor. The map viewers have been put together by Chris Fleet.
+<p>For a full description of this project, see the project web pages on <a href="https://maps.nls.uk/projects/stevenson/geocoding.html">Geocoding the Stevenson Maps and Plans of Scotland</a>  and <a href="https://maps.nls.uk/projects/stevenson/web-mapping.html">Setting up a web-mapping interface for the Stevenson Collection</a><p>
