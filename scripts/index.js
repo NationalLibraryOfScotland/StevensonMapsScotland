@@ -367,7 +367,7 @@ var filterinprocess;
 
 // the Stevenson GeoJSON file for all the maps
 
-	var stevenson_geojson = 'https://github.com/NationalLibraryOfScotland/StevensonMapsScotland/blob/master/scripts/stevenson_areas.js';
+	var stevenson_geojson = 'http://geo.nls.uk/maps/stevenson/scripts/stevenson_areas.js';
 
 // adding the Stevenson GeoJSON to the vector source and layer
 
