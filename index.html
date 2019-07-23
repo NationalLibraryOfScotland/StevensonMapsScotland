@@ -1,8 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if gt IE 1]><html xmlns="http://www.w3.org/1999/xhtml" class="ie"><![endif]-->
-<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="en" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="en" />
 		<title>Stevenson Maps and Plans of Scotland, 1660-1940 - National Library of Scotland / University of Edinburgh</title>
 		<!-- jQuery UI css -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
@@ -33,12 +35,14 @@
 
 		</div>
 
-            <button id="show">Show Search Panel</button>
+            <button id="show">Show Search Panel</button>
+
 	    <div id="sidebar">
 
                 <button type="button" id="hide" class="close" >
                   <span >&times;</span>
-                </button>
+                </button>
+
 
 		    <p>Filter the maps by <strong>subject</strong>:</p>
 
@@ -68,7 +72,8 @@
 
 			<p>Change <strong>transparency of base mapping</strong>:</p>
 
-			<div id="transparency"></div>
+			<div id="transparency"></div>
+
 	     	</div>
 
 		 <div id="map" class="map">
@@ -80,7 +85,8 @@
 		</div>
 		
 		<div id="resultsSideBar">
- 			<div id="resultsheader"></div>			<div id="results"></div>
+ 			<div id="resultsheader"></div>
+			<div id="results"></div>
 		</div>
 
 		<div id="logo">
@@ -115,7 +121,7 @@
 
 		<!-- Our specific Javascript for this map -->
 
-		<script type="text/javascript" src="scripts/index_22_july.js"></script> 
+		<script type="text/javascript" src="scripts/index.js"></script> 
 
 		<script type="text/javascript">
 
@@ -130,7 +136,8 @@
 	             jQuery("#sidebar").show();
 	             jQuery("#show").hide();
 	         });
-		</script>
+
+		</script>
 
 <!--#include file="/analytics.stm" -->
 
