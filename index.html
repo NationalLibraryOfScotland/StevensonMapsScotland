@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if gt IE 1]><html xmlns="http://www.w3.org/1999/xhtml" class="ie"><![endif]-->
+<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="en" />
+		<title>Stevenson Maps and Plans of Scotland, 1660-1940 - National Library of Scotland / University of Edinburgh</title>
+		<!-- jQuery UI css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+		<!-- specific css to this page -->
+		<link type="text/css" rel="stylesheet" href="css/maincss.css" media="screen" /> 
+		<!-- OpenLayers css -->
+		<link type="text/css" rel="stylesheet" href="css/ol.css" media="screen" /> 
+
+        </head>
+
+	<body>
+
+		<div id="header">
+
+			<div id="headertitle">
+
+			<h1>The Stevenson Maps and Plans of Scotland, 1660 - 1940</h1> 
+
+			<h5></h5>
+	
+			</div>
+
+			<div id="headerlinks">
+	
+				<p><strong>Map Search</strong>  &nbsp; &nbsp;   <a href="https://maps.nls.uk/projects/stevenson/browse/">Text Search</a>  &nbsp; &nbsp;  <a href="about.html">About</a> &nbsp; &nbsp;  <a href="project.html">Project</a> &nbsp; &nbsp; <a href="help.html">Help</a></p>
+	
+			</div>
+
+		</div>
+
+            <button id="show">Show Search Panel</button>
+	    <div id="sidebar">
+
+                <button type="button" id="hide" class="close" >
+                  <span >&times;</span>
+                </button>
+
+		    <p>Filter the plans by <strong>subject</strong>:</p>
+
+		    <form><select id="subjectselect" onchange="javascript:changesubject(this.selectedIndex);"></select></form>
+
+		    <hr2></hr2>
+
+		    <p>Filter the plans by <strong>date range</strong>:</p>
+	
+			  <label for="amount">Date range:</label>
+			  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100px; background-color: white; background:rgba(255,255,255,0.4);" />
+			  <div id="slider-range"></div>
+
+			 <div id="undatedplans">
+                         <label for="undated">Exclude undated plans<input id="undated" type="checkbox"/></label>
+			</div>
+
+		    <hr2></hr2>
+
+			<p><strong>Filter plans by coverage?</strong></p>
+			<form id = "scalesofmaps" >
+			<input type="radio" name="zoomlevel" value="1" onclick="javascript:filter();" checked="checked" />Yes - based on zoom level <br/>
+			<input type="radio" name="zoomlevel" onclick="javascript:filter();" value="2" />No - all plans shown<br/>
+			</form>
+
+		    <hr2></hr2>
+
+		<p><strong>Search for a place:</strong></p>
+
+			<p><input type="search" autocomplete="off" id="gaz" onfocus="if(this.value == 'Type a placename...') { this.value = ''; }" onblur="this.value=!this.value?'Type a placename...':this.value;" value="Type a placename..." name="gaz" /> 
+
+		    <hr2></hr2>
+
+			<p>Change <strong>transparency of base mapping</strong>:</p>
+
+			<div id="transparency"></div>
+	     	</div>
+
+		 <div id="map" class="map">
+			<form><select id="layerSelect" onchange="changemap(this.selectedIndex)"></select></form>
+			<div id="scalebar"></div>
+			<div id="loading_results"></div>
+			<div id="hover_results"></div>
+			<div id="zoom_statement"></div>
+		</div>
+		
+		<div id="resultsSideBar">
+ 			<div id="resultsheader"></div>			<div id="results"></div>
+		</div>
+
+		<div id="logo">
+			
+			<a href="https://www.ed.ac.uk/"><img id="ed" src="img/edinburgh-university-logo.jpg" alt="University of Edinburgh" /></a>
+			
+			<a href="https://ahrc.ukri.org/"><img id="ahrc" src="img/ahrc-logo.png" alt="Arts and Humanities Research Council" /></a>
+			
+			<a href="http://www.nls.uk/"><img id="nls" src="img/nls-logo.jpg" alt="National Library of Scotland" /></a>
+			
+		</div>
+
+
+		<!-- JQuery Javascript -->
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- JQuery UI Javascript for slider -->
+
+  	        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<!-- proj4 Javascript for projection information -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js"></script>
+
+		<!-- OSMName Gazetteer Javascript -->
+
+    		<script type="text/javascript" src="https://osmnames.org/api/v1/autocomplete.js"></script>
+
+
+		<!-- OpenLayers Javascript - use ol-debug.js for debugging and ol.js for releasing when finished  -->
+
+	        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.js"></script> 
+
+	        <!-- <script type="text/javascript" src="scripts/ol-debug.js"></script> -->
+
+		<!-- Our specific Javascript for this map -->
+
+		<script type="text/javascript" src="scripts/index_25_july.js"></script> 
+
+		<script type="text/javascript">
+
+		jQuery("#show").hide();
+     
+         	jQuery("#hide").click(function(){
+             		jQuery("#sidebar").hide();
+			jQuery("#show").show();
+         	});
+
+	         jQuery("#show").click(function(){
+	             jQuery("#sidebar").show();
+	             jQuery("#show").hide();
+	         });
+		</script>
+
+<!--#include file="/analytics.stm" -->
+
+	</body>
+</html>
