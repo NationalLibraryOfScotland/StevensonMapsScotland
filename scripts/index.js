@@ -391,7 +391,7 @@ filterstart = true;
 
 // the Stevenson GeoJSON file for all the maps
 
-	var stevenson_geojson = 'https://geo.nls.uk/maps/stevenson/scripts/stevenson_areas_27_july.js';
+	var stevenson_geojson = 'stevenson_areas.js';
 
 // adding the Stevenson GeoJSON to the vector source and layer
 
