@@ -14,3 +14,5 @@ The Stevenson Maps and Plans of Scotland, 1660 - 1940 - map viewer
 </ol>
 
 <p>For a full description of this project, see the project web pages on <a href="https://maps.nls.uk/projects/stevenson/geocoding.html">Geocoding the Stevenson Maps and Plans of Scotland</a>  and <a href="https://maps.nls.uk/projects/stevenson/web-mapping.html">Setting up a web-mapping interface for the Stevenson Collection</a>. All the specific OpenLayers code for this application is in the <a href="https://github.com/NationalLibraryOfScotland/StevensonMapsScotland/blob/master/scripts/index.js">/scripts/index.js</a> file, which has been commented to explain specific functions.<p>
+  
+  <p>View the <a href="https://maps.nls.uk/projects/stevenson/">Stevenson Maps and Plans of Scotland</a> web resource.</p>
